@@ -16,21 +16,27 @@ class CPedGroupDefaultTaskAllocator;
 class CTaskAllocator;
 class CEvent;
 class CPedGroup;
+class CEventGroupEvent;
 
 class PLUGIN_API CPedGroupIntelligence {
     PLUGIN_NO_DEFAULT_CONSTRUCTION(CPedGroupIntelligence)
 
 public:
     CPedGroup *m_pPedGroup;
-    CGroupEventHandler *m_pGroupEventHandler;
-    int m_pEventGroupEvent;
-    CPedTaskPair m_groupTasks[53];
-    unsigned char gap288[4];
+    CEventGroupEvent *m_pCurrentEvent;
+    CEventGroupEvent *m_pHighestPriorityEvent;
+    CPedTaskPair m_pedTaskPairs[8];
+    CPedTaskPair m_secondaryPedTaskPairs[8];
+    CPedTaskPair m_scriptCommandPedTaskPairs[8];
+    CPedTaskPair m_defaultPedTaskPairs[8];
     CPedGroupDefaultTaskAllocator *m_pPedGroupDefaultTaskAllocator;
     CTaskAllocator *m_pPrimaryTaskAllocator;
     CTaskAllocator *m_pEventResponseTaskAllocator;
     int m_dwDecisionMakerType;
-    char field_29C;
+    union {
+        int m_nTaskSequenceId;
+        int field_29C; // legacy plugin-sdk name
+    };
 
     SUPPORTED_10US bool AddEvent(CEvent *event);
     SUPPORTED_10US void ComputeDefaultTasks(CPed *ped);
@@ -66,14 +72,17 @@ public:
     SUPPORTED_10US void SetTask(CPed *ped, CTask const *task, CPedTaskPair *taskpair, int arg5, bool arg6);
 };
 VALIDATE_OFFSET(CPedGroupIntelligence, m_pPedGroup, 0x0);
-VALIDATE_OFFSET(CPedGroupIntelligence, m_pGroupEventHandler, 0x4);
-VALIDATE_OFFSET(CPedGroupIntelligence, m_pEventGroupEvent, 0x8);
-VALIDATE_OFFSET(CPedGroupIntelligence, m_groupTasks, 0xC);
-VALIDATE_OFFSET(CPedGroupIntelligence, gap288, 0x288);
+VALIDATE_OFFSET(CPedGroupIntelligence, m_pCurrentEvent, 0x4);
+VALIDATE_OFFSET(CPedGroupIntelligence, m_pHighestPriorityEvent, 0x8);
+VALIDATE_OFFSET(CPedGroupIntelligence, m_pedTaskPairs, 0xC);
+VALIDATE_OFFSET(CPedGroupIntelligence, m_secondaryPedTaskPairs, 0xAC);
+VALIDATE_OFFSET(CPedGroupIntelligence, m_scriptCommandPedTaskPairs, 0x14C);
+VALIDATE_OFFSET(CPedGroupIntelligence, m_defaultPedTaskPairs, 0x1EC);
 VALIDATE_OFFSET(CPedGroupIntelligence, m_pPedGroupDefaultTaskAllocator, 0x28C);
 VALIDATE_OFFSET(CPedGroupIntelligence, m_pPrimaryTaskAllocator, 0x290);
 VALIDATE_OFFSET(CPedGroupIntelligence, m_pEventResponseTaskAllocator, 0x294);
 VALIDATE_OFFSET(CPedGroupIntelligence, m_dwDecisionMakerType, 0x298);
+VALIDATE_OFFSET(CPedGroupIntelligence, m_nTaskSequenceId, 0x29C);
 VALIDATE_OFFSET(CPedGroupIntelligence, field_29C, 0x29C);
 VALIDATE_SIZE(CPedGroupIntelligence, 0x2A0);
 
