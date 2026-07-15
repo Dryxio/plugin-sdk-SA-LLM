@@ -20,3 +20,16 @@ void CEventHandler::ComputePedCollisionWithPedResponse(CEvent *event, CTask *act
         simplestTask
     );
 }
+
+int addrof(CEventHandler::ComputePedCollisionWithPlayerResponse) = ADDRESS_BY_VERSION(0x4BE7D0, 0, 0, 0, 0, 0);
+int gaddrof(CEventHandler::ComputePedCollisionWithPlayerResponse) = GLOBAL_ADDRESS_BY_VERSION(0x4BE7D0, 0, 0, 0, 0, 0);
+
+void CEventHandler::ComputePedCollisionWithPlayerResponse(CEvent *event, CTask *activeTask, CTask *simplestTask) {
+    plugin::CallMethodDynGlobal<CEventHandler *, CEvent *, CTask *, CTask *>(
+        gaddrof(CEventHandler::ComputePedCollisionWithPlayerResponse),
+        this,
+        event,
+        activeTask,
+        simplestTask
+    );
+}
