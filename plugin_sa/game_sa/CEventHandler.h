@@ -8,6 +8,9 @@
 
 #include "PluginBase.h"
 
+class CEvent;
+class CTask;
+
 class PLUGIN_API CEventHandler {
 public:
     class CPed *m_pPed;
@@ -25,6 +28,8 @@ public:
     int field_28;
     int field_2C;
     int field_30;
+
+    SUPPORTED_10US void ComputePedCollisionWithPedResponse(CEvent *event, CTask *activeTask, CTask *simplestTask);
 };
 VALIDATE_OFFSET(CEventHandler, m_pPed, 0x0);
 VALIDATE_OFFSET(CEventHandler, field_4, 0x4);
@@ -42,3 +47,5 @@ VALIDATE_OFFSET(CEventHandler, field_28, 0x28);
 VALIDATE_OFFSET(CEventHandler, field_2C, 0x2C);
 VALIDATE_OFFSET(CEventHandler, field_30, 0x30);
 VALIDATE_SIZE(CEventHandler, 0x34);
+
+#include "meta/meta.CEventHandler.h"
