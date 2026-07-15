@@ -2,7 +2,7 @@
 
 # plugin-sdk-SA-LLM
 
-plugin-sdk-SA-LLM is an independent, GTA: San Andreas-focused continuation of Plugin-SDK. It is based on knowledge from our [100% LLM-assisted GTA:SA reverse-engineering project](https://github.com/Dryxio/gta-reversed-dryxio), completed with the help of the `auto-re-agent` workflow.
+plugin-sdk-SA-LLM is an independent, GTA: San Andreas-focused continuation of Plugin-SDK. It is based on knowledge from our 100% LLM-assisted GTA:SA reverse-engineering project, completed with the help of the [`auto-re-agent`](https://github.com/Dryxio/auto-re-agent) workflow.
 
 Our goal is to bring verified classes, memory layouts, addresses, signatures, enums, globals, and hooks from the complete reverse into a practical SDK for mod authors. This repository preserves Plugin-SDK's upstream history and credits while being maintained as an independent repository rather than a GitHub fork.
 
