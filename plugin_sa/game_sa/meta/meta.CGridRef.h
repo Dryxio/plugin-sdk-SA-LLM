@@ -58,13 +58,13 @@ META_END
 META_BEGIN(CGridRef::GetAreaName)
     static int address;
     static int global_address;
-    static const int id = 0x71D650;
+    static const int id = 0x71D670;
     static const bool is_virtual = false;
     static const int vtable_index = -1;
-    using mv_addresses_t = MvAddresses<0x71D650, 0, 0, 0, 0, 0>;
+    using mv_addresses_t = MvAddresses<0x71D670, 0, 0, 0, 0, 0>;
     // total references count: 10us (0), 10ushl (0), 10eu (0), 11us (0), 11eu (0), sr2 (0), sr2lv (0)
     using refs_t = RefList<>;
-    using def_t = char *(unsigned char, unsigned char);
+    using def_t = unsigned int(unsigned char, unsigned char);
     static const int cb_priority = PRIORITY_BEFORE; 
     using calling_convention_t = CallingConventions::Cdecl;
     using args_t = ArgPick<ArgTypes<unsigned char,unsigned char>, 0,1>;
@@ -73,13 +73,13 @@ META_END
 META_BEGIN(CGridRef::GetArtistBugstarID)
     static int address;
     static int global_address;
-    static const int id = 0x71D670;
+    static const int id = 0x71D650;
     static const bool is_virtual = false;
     static const int vtable_index = -1;
-    using mv_addresses_t = MvAddresses<0x71D670, 0, 0, 0, 0, 0>;
+    using mv_addresses_t = MvAddresses<0x71D650, 0, 0, 0, 0, 0>;
     // total references count: 10us (0), 10ushl (0), 10eu (0), 11us (0), 11eu (0), sr2 (0), sr2lv (0)
     using refs_t = RefList<>;
-    using def_t = unsigned int(unsigned char, unsigned char);
+    using def_t = char *(unsigned char, unsigned char);
     static const int cb_priority = PRIORITY_BEFORE; 
     using calling_convention_t = CallingConventions::Cdecl;
     using args_t = ArgPick<ArgTypes<unsigned char,unsigned char>, 0,1>;

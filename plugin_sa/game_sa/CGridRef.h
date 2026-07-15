@@ -11,8 +11,8 @@
 
 class PLUGIN_API CGridRef {
 public:
-    SUPPORTED_10US static char *GetAreaName(unsigned char sectorX, unsigned char sectorY);
-    SUPPORTED_10US static unsigned int GetArtistBugstarID(unsigned char sectorX, unsigned char sectorY);
+    SUPPORTED_10US static unsigned int GetAreaName(unsigned char sectorX, unsigned char sectorY);
+    SUPPORTED_10US static char *GetArtistBugstarID(unsigned char sectorX, unsigned char sectorY);
     SUPPORTED_10US static void GetGridRefPositions(CVector posn, unsigned char *outSectorX, unsigned char *outSectorY);
     SUPPORTED_10US static void GetGridRefPositions(unsigned char *outSectorX, unsigned char *outSectorY);
     SUPPORTED_10US static void Init();

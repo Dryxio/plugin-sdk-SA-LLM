@@ -10,18 +10,18 @@ PLUGIN_SOURCE_FILE
 
 PLUGIN_VARIABLE char(&GridRefList)[10][10][32] = *reinterpret_cast<char(*)[10][10][32]>(GLOBAL_ADDRESS_BY_VERSION(0xC72FB0, 0, 0, 0, 0, 0));
 
-int addrof(CGridRef::GetAreaName) = ADDRESS_BY_VERSION(0x71D650, 0, 0, 0, 0, 0);
-int gaddrof(CGridRef::GetAreaName) = GLOBAL_ADDRESS_BY_VERSION(0x71D650, 0, 0, 0, 0, 0);
+int addrof(CGridRef::GetAreaName) = ADDRESS_BY_VERSION(0x71D670, 0, 0, 0, 0, 0);
+int gaddrof(CGridRef::GetAreaName) = GLOBAL_ADDRESS_BY_VERSION(0x71D670, 0, 0, 0, 0, 0);
 
-char *CGridRef::GetAreaName(unsigned char sectorX, unsigned char sectorY) {
-    return plugin::CallAndReturnDynGlobal<char *, unsigned char, unsigned char>(gaddrof(CGridRef::GetAreaName), sectorX, sectorY);
+unsigned int CGridRef::GetAreaName(unsigned char sectorX, unsigned char sectorY) {
+    return plugin::CallAndReturnDynGlobal<unsigned int, unsigned char, unsigned char>(gaddrof(CGridRef::GetAreaName), sectorX, sectorY);
 }
 
-int addrof(CGridRef::GetArtistBugstarID) = ADDRESS_BY_VERSION(0x71D670, 0, 0, 0, 0, 0);
-int gaddrof(CGridRef::GetArtistBugstarID) = GLOBAL_ADDRESS_BY_VERSION(0x71D670, 0, 0, 0, 0, 0);
+int addrof(CGridRef::GetArtistBugstarID) = ADDRESS_BY_VERSION(0x71D650, 0, 0, 0, 0, 0);
+int gaddrof(CGridRef::GetArtistBugstarID) = GLOBAL_ADDRESS_BY_VERSION(0x71D650, 0, 0, 0, 0, 0);
 
-unsigned int CGridRef::GetArtistBugstarID(unsigned char sectorX, unsigned char sectorY) {
-    return plugin::CallAndReturnDynGlobal<unsigned int, unsigned char, unsigned char>(gaddrof(CGridRef::GetArtistBugstarID), sectorX, sectorY);
+char *CGridRef::GetArtistBugstarID(unsigned char sectorX, unsigned char sectorY) {
+    return plugin::CallAndReturnDynGlobal<char *, unsigned char, unsigned char>(gaddrof(CGridRef::GetArtistBugstarID), sectorX, sectorY);
 }
 
 int addrof_o(CGridRef::GetGridRefPositions, void (*)(CVector, unsigned char *, unsigned char *)) = ADDRESS_BY_VERSION(0x71D5A0, 0, 0, 0, 0, 0);
