@@ -106,7 +106,7 @@ VALIDATE_SIZE(tEffectPedAttractor, 0x30);
 
 struct tEffectEnEx {
     float m_fEnterAngle;
-    RwV3d m_vecSize;
+    RwV2d m_vecSize;
     RwV3d m_vecExitPosn;
     float m_fExitAngle;
     short m_nInteriorId;
@@ -119,16 +119,16 @@ struct tEffectEnEx {
 };
 VALIDATE_OFFSET(tEffectEnEx, m_fEnterAngle, 0x0);
 VALIDATE_OFFSET(tEffectEnEx, m_vecSize, 0x4);
-VALIDATE_OFFSET(tEffectEnEx, m_vecExitPosn, 0x10);
-VALIDATE_OFFSET(tEffectEnEx, m_fExitAngle, 0x1C);
-VALIDATE_OFFSET(tEffectEnEx, m_nInteriorId, 0x20);
-VALIDATE_OFFSET(tEffectEnEx, m_nFlags1, 0x22);
-VALIDATE_OFFSET(tEffectEnEx, m_nSkyColor, 0x23);
-VALIDATE_OFFSET(tEffectEnEx, m_szInteriorName, 0x24);
-VALIDATE_OFFSET(tEffectEnEx, m_nTimeOn, 0x2C);
-VALIDATE_OFFSET(tEffectEnEx, m_nTimeOff, 0x2D);
-VALIDATE_OFFSET(tEffectEnEx, m_nFlags2, 0x2E);
-VALIDATE_SIZE(tEffectEnEx, 0x30);
+VALIDATE_OFFSET(tEffectEnEx, m_vecExitPosn, 0xC);
+VALIDATE_OFFSET(tEffectEnEx, m_fExitAngle, 0x18);
+VALIDATE_OFFSET(tEffectEnEx, m_nInteriorId, 0x1C);
+VALIDATE_OFFSET(tEffectEnEx, m_nFlags1, 0x1E);
+VALIDATE_OFFSET(tEffectEnEx, m_nSkyColor, 0x1F);
+VALIDATE_OFFSET(tEffectEnEx, m_szInteriorName, 0x20);
+VALIDATE_OFFSET(tEffectEnEx, m_nTimeOn, 0x28);
+VALIDATE_OFFSET(tEffectEnEx, m_nTimeOff, 0x29);
+VALIDATE_OFFSET(tEffectEnEx, m_nFlags2, 0x2A);
+VALIDATE_SIZE(tEffectEnEx, 0x2C);
 
 struct tEffectRoadsign {
     RwV2d m_vecSize;
