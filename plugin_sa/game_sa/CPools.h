@@ -35,6 +35,15 @@ public:
     static CPool<CPtrNodeSingleLink>       *&ms_pPtrNodeSingleLinkPool;
     static CPool<CPtrNodeDoubleLink>       *&ms_pPtrNodeDoubleLinkPool;
 
+    // Types for these pools are not exposed by plugin-sdk yet.
+    static void *&ms_pEntryInfoNodePool;
+    static void *&ms_pEventPool;
+    static void *&ms_pPointRoutePool;
+    static void *&ms_pPatrolRoutePool;
+    static void *&ms_pNodeRoutePool;
+    static void *&ms_pTaskAllocatorPool;
+    static void *&ms_pPedAttractorPool;
+
     // dummy function; returns "-1"
     static int CheckBuildingAtomics();
     static void CheckPoolsEmpty();

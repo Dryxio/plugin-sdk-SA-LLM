@@ -14,8 +14,15 @@ CPool<CDummy> *&CPools::ms_pDummyPool                     = *(CPool<CDummy> **)0
 CPool<CColModel> *&CPools::ms_pColModelPool               = *(CPool<CColModel> **)0xB744A4;
 CPool<CTask, char[128]> *&CPools::ms_pTaskPool            = *(CPool<CTask, char[128]> **)0xB744A8;
 CPool<CPedIntelligence> *&CPools::ms_pPedIntelligencePool = *(CPool<CPedIntelligence> **)0xB744C0;
-CPool<CPtrNodeSingleLink> *&ms_pPtrNodeSingleLinkPool     = *(CPool<CPtrNodeSingleLink> **)0xB74484;
-CPool<CPtrNodeDoubleLink> *&ms_pPtrNodeDoubleLinkPool     = *(CPool<CPtrNodeDoubleLink> **)0xB74488;
+CPool<CPtrNodeSingleLink> *&CPools::ms_pPtrNodeSingleLinkPool = *(CPool<CPtrNodeSingleLink> **)0xB74484;
+CPool<CPtrNodeDoubleLink> *&CPools::ms_pPtrNodeDoubleLinkPool = *(CPool<CPtrNodeDoubleLink> **)0xB74488;
+void *&CPools::ms_pEntryInfoNodePool                      = *(void **)0xB7448C;
+void *&CPools::ms_pEventPool                              = *(void **)0xB744AC;
+void *&CPools::ms_pPointRoutePool                         = *(void **)0xB744B0;
+void *&CPools::ms_pPatrolRoutePool                        = *(void **)0xB744B4;
+void *&CPools::ms_pNodeRoutePool                          = *(void **)0xB744B8;
+void *&CPools::ms_pTaskAllocatorPool                      = *(void **)0xB744BC;
+void *&CPools::ms_pPedAttractorPool                       = *(void **)0xB744C4;
 
 // Converted from cdecl int CPools::CheckBuildingAtomics(void) 0x550170
 int CPools::CheckBuildingAtomics() {
