@@ -9,7 +9,6 @@
 #include "PluginBase.h"
 #include "CVector.h"
 
-#pragma pack(push, 1)
 class PLUGIN_API CFileCarGenerator {
 public:
     CVector m_vecPosn;
@@ -51,7 +50,4 @@ VALIDATE_OFFSET(CFileCarGenerator, m_nAlarm, 0x20);
 VALIDATE_OFFSET(CFileCarGenerator, m_nDoorLock, 0x24);
 VALIDATE_OFFSET(CFileCarGenerator, m_nMinDelay, 0x28);
 VALIDATE_OFFSET(CFileCarGenerator, m_nMaxDelay, 0x2C);
-VALIDATE_SIZE(CFileCarGenerator, 0x2E);
-#pragma pack(pop)
-
-VALIDATE_SIZE(CFileCarGenerator, 0x2E);
+VALIDATE_SIZE(CFileCarGenerator, 0x30);
