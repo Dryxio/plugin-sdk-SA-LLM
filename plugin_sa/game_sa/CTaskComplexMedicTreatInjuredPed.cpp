@@ -7,7 +7,7 @@
 #include "CTaskComplex.h"
 #include "CTaskComplexMedicTreatInjuredPed.h"
 
-CTaskComplexMedicTreatInjuredPed::CTaskComplexMedicTreatInjuredPed(CVehicle* pAmbulance, CPed *pMedic, bool isPassenger) : CTaskComplex(plugin::dummy)
+CTaskComplexMedicTreatInjuredPed::CTaskComplexMedicTreatInjuredPed(CVehicle *vehicle, CPed *partnerMedic, bool isDriver) : CTaskComplex(plugin::dummy)
 {
-	plugin::CallMethod<0x658BA0, CTaskComplexMedicTreatInjuredPed*, CVehicle *, CPed *, bool>(this, pAmbulance, pMedic, isPassenger);
+	plugin::CallMethod<0x658BA0, CTaskComplexMedicTreatInjuredPed*, CVehicle *, CPed *, bool>(this, vehicle, partnerMedic, isDriver);
 }
