@@ -7,7 +7,7 @@
 #include "CTaskComplex.h"
 #include "CTaskComplexDriveFireTruck.h"
 
-CTaskComplexDriveFireTruck::CTaskComplexDriveFireTruck(CVehicle* pFiretruck, CPed *pFireman, bool isPassenger) : CTaskComplex(plugin::dummy)
+CTaskComplexDriveFireTruck::CTaskComplexDriveFireTruck(CVehicle *vehicle, CPed *partnerFireman, bool isDriver) : CTaskComplex(plugin::dummy)
 {
-	plugin::CallMethod<0x659310, CTaskComplexDriveFireTruck*, CVehicle *, CPed *, bool>(this, pFiretruck, pFireman, isPassenger);
+	plugin::CallMethod<0x659310, CTaskComplexDriveFireTruck*, CVehicle *, CPed *, bool>(this, vehicle, partnerFireman, isDriver);
 }
