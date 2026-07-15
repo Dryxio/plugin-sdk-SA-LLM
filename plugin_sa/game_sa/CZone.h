@@ -11,6 +11,8 @@
 
 enum eZoneType {
 	ZONE_TYPE_NAVI = 0,		// controls text s
+	ZONE_TYPE_LOCAL_NAVI = 1,
+	ZONE_TYPE_INFO = 2,
 	ZONE_TYPE_MAP = 3
 };
 
@@ -31,7 +33,10 @@ public:
 	short         m_fX2;
 	short         m_fY2;
 	short         m_fZ2;
-	CZoneInfo     m_nZoneExtraIndexInfo;
+	union {
+		unsigned short m_nZoneInfoIndex;
+		unsigned short m_nZoneExtraIndexInfo; // legacy plugin-sdk name
+	};
 	unsigned char m_nType; // see eZoneType
     unsigned char m_nLevel; // see eLevelName
 
@@ -46,7 +51,8 @@ VALIDATE_OFFSET(CZone, m_fZ1, 0x14);
 VALIDATE_OFFSET(CZone, m_fX2, 0x16);
 VALIDATE_OFFSET(CZone, m_fY2, 0x18);
 VALIDATE_OFFSET(CZone, m_fZ2, 0x1A);
+VALIDATE_OFFSET(CZone, m_nZoneInfoIndex, 0x1C);
 VALIDATE_OFFSET(CZone, m_nZoneExtraIndexInfo, 0x1C);
-VALIDATE_OFFSET(CZone, m_nType, 0x2D);
-VALIDATE_OFFSET(CZone, m_nLevel, 0x2E);
-VALIDATE_SIZE(CZone, 0x30);
+VALIDATE_OFFSET(CZone, m_nType, 0x1E);
+VALIDATE_OFFSET(CZone, m_nLevel, 0x1F);
+VALIDATE_SIZE(CZone, 0x20);
