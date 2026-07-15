@@ -400,7 +400,7 @@ public:
     SUPPORTED_10US void ProcessObbeCinemaCameraCar();
     SUPPORTED_10US void ProcessObbeCinemaCameraHeli();
     //! unused, empty
-    SUPPORTED_10US unsigned int ProcessObbeCinemaCameraPed();
+    SUPPORTED_10US void ProcessObbeCinemaCameraPed();
     SUPPORTED_10US void ProcessObbeCinemaCameraPlane();
     SUPPORTED_10US void ProcessObbeCinemaCameraTrain();
     //! unused

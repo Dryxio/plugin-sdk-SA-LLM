@@ -461,8 +461,8 @@ void CCamera::ProcessObbeCinemaCameraHeli() {
 int addrof(CCamera::ProcessObbeCinemaCameraPed) = ADDRESS_BY_VERSION(0x50B880, 0, 0, 0, 0, 0);
 int gaddrof(CCamera::ProcessObbeCinemaCameraPed) = GLOBAL_ADDRESS_BY_VERSION(0x50B880, 0, 0, 0, 0, 0);
 
-unsigned int CCamera::ProcessObbeCinemaCameraPed() {
-    return plugin::CallMethodAndReturnDynGlobal<unsigned int, CCamera *>(gaddrof(CCamera::ProcessObbeCinemaCameraPed), this);
+void CCamera::ProcessObbeCinemaCameraPed() {
+    plugin::CallMethodDynGlobal<CCamera *>(gaddrof(CCamera::ProcessObbeCinemaCameraPed), this);
 }
 
 int addrof(CCamera::ProcessObbeCinemaCameraPlane) = ADDRESS_BY_VERSION(0x526C80, 0, 0, 0, 0, 0);

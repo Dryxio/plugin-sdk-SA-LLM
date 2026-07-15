@@ -358,7 +358,7 @@ META_BEGIN(CCamera::GetCutSceneFinishTime)
     using refs_t = RefList<
         0x5B04DF, GAME_10US_COMPACT, H_CALL, 0x5B04D0, 1,
         0x5B1919, GAME_10US_COMPACT, H_CALL, 0x5B1720, 1>;
-    using def_t = unsigned int(CCamera *);
+    using def_t = void(CCamera *);
     static const int cb_priority = PRIORITY_BEFORE; 
     using calling_convention_t = CallingConventions::Thiscall;
     using args_t = ArgPick<ArgTypes<CCamera *>, 0>;
