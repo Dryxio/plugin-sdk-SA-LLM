@@ -33,7 +33,6 @@ public:
     CAECollisionAudioEntity m_collisionAudio;
     int m_pWeaponAudio;
     CAEPedlessSpeechAudioEntity m_pedlessSpeechAudio;
-    char field_1F38[24];
     CAEDoorAudioEntity m_doorAudio;
 
 public:
@@ -79,7 +78,6 @@ VALIDATE_OFFSET(CAudioEngine, m_scriptAudio, 0x2A0);
 VALIDATE_OFFSET(CAudioEngine, m_collisionAudio, 0x4BC);
 VALIDATE_OFFSET(CAudioEngine, m_pWeaponAudio, 0x1E34);
 VALIDATE_OFFSET(CAudioEngine, m_pedlessSpeechAudio, 0x1E38);
-VALIDATE_OFFSET(CAudioEngine, field_1F38, 0x1F38);
 VALIDATE_OFFSET(CAudioEngine, m_doorAudio, 0x1F50);
 VALIDATE_SIZE(CAudioEngine, 0x1FD8);
 

@@ -8,9 +8,11 @@
 #include "PluginBase.h"
 #include "CAEPedSpeechAudioEntity.h"
 
-class PLUGIN_API CAEPedlessSpeechAudioEntity {
+class PLUGIN_API CAEPedlessSpeechAudioEntity : public CAEPedSpeechAudioEntity {
 public:
-    CAEPedSpeechAudioEntity pedSpeech;
+    char field_100[20];
+    CEntity *m_pAttachedEntity;
 };
-VALIDATE_OFFSET(CAEPedlessSpeechAudioEntity, pedSpeech, 0x0);
-VALIDATE_SIZE(CAEPedlessSpeechAudioEntity, 0x100);
+VALIDATE_OFFSET(CAEPedlessSpeechAudioEntity, field_100, 0x100);
+VALIDATE_OFFSET(CAEPedlessSpeechAudioEntity, m_pAttachedEntity, 0x114);
+VALIDATE_SIZE(CAEPedlessSpeechAudioEntity, 0x118);
