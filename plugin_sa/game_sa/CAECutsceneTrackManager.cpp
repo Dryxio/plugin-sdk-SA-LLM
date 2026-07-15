@@ -21,8 +21,8 @@ void CAECutsceneTrackManager::Service(int time) {
     plugin::CallMethod<0x4DBFB0, CAECutsceneTrackManager*, int>(this, time);
 }
 
-void CAECutsceneTrackManager::PreloadBeatTrack(char arg1, bool arg2) {
-    plugin::CallMethod<0x4DC130, CAECutsceneTrackManager*, char, bool>(this, arg1, arg2);
+void CAECutsceneTrackManager::PreloadBeatTrack(short trackId, bool wait) {
+    plugin::CallMethod<0x4DC130, CAECutsceneTrackManager*, short, bool>(this, trackId, wait);
 }
 
 void CAECutsceneTrackManager::PlayPreloadedCutsceneTrack() {
