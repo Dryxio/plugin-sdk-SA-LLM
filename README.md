@@ -6,8 +6,6 @@
 
 This is an actively developed fork of [Plugin-SDK](https://github.com/DK22Pac/plugin-sdk), focused on GTA: San Andreas. It keeps the familiar workflow and progressively improves the game's definitions using our complete reverse-engineered codebase.
 
-> **In one sentence:** this is a C++ modding SDK—not a mod, not a game download, and not an AI tool you need to run.
-
 ## Why does this repository exist?
 
 Plugin-SDK gives mod authors convenient C++ access to the game's classes, functions, globals, events, and hooks. Some GTA: San Andreas declarations are incomplete or differ from the original executable, however. A wrong field offset, class size, function signature, or address can cause anything from a compiler error to a hard-to-debug crash.
