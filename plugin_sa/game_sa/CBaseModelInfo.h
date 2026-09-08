@@ -42,9 +42,9 @@ public:
 			unsigned char bAdditiveRender: 1;
 			unsigned char bDontWriteZBuffer: 1;
 			unsigned char bDontCastShadowsOn : 1;
-			unsigned char bDoWeOwnTheColModel : 1;
-			unsigned char bIsBackfaceCulled : 1;
 			unsigned char bIsLod : 1;
+			unsigned char bIsBackfaceCulled : 1;
+			unsigned char bDoWeOwnTheColModel : 1;
 			union{
 				struct{
 					unsigned char bIsRoad: 1;
@@ -115,8 +115,8 @@ public:
 	bool IsTagModel();
 	bool SwaysInWind();
 	void SetHasBeenPreRendered(int bHasBeenPreRendered);
+	void SetDoWeOwnTheColModel(int bOwned);
 	void SetIsLod(int bIsLod);
-	void SetOwnsColModel(int bOwns);
 	void IncreaseAlpha();
 };
 VALIDATE_OFFSET(CBaseModelInfo, m_nKey, 0x4);
