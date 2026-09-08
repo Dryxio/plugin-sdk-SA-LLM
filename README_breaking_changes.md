@@ -1,3 +1,12 @@
+## SA upstream sync through 15f15b60 (2026-09-08)
+
+- `CBaseModelInfo`: LOD is bit `0x20`, collision-model ownership is bit `0x80`. Use `SetDoWeOwnTheColModel` for ownership and `SetIsLod`/`IsLod` for LOD.
+- `CMenuManager::CheckSliderMovement` takes a signed byte direction instead of a float (normally `-1` or `1`).
+- `CPad::GetMeleeAttack` accepts the optional boolean argument; `CVehicle::GetReplacementUpgrade` returns the model ID or `-1`.
+- `CNodeAddress` uses unsigned `Region` and `Index`; `0xFFFF` remains the invalid sentinel. `CPathNode` adopts upstream field names and flags.
+- `CAERadioTrackManager` adopts upstream field names, five-entry track queues and fourteen station records. `tRadioStationData` is now `tRadioStationTracking`.
+- Build generation follows upstream Visual Studio 2026 and Premake Clang/MinGW support.
+
 ## v.1004 from 2026-04-18
 
 - III, VC, SA enums refactor

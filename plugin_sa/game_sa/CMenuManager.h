@@ -401,7 +401,7 @@ public:
     bool CheckHover(float x1, float x2, float y1, float y2);
     bool CheckMissionPackValidMenu();
     bool CheckRedefineControlInput();
-    void CheckSliderMovement(float input);
+    void CheckSliderMovement(signed char input);
     void DisplayHelperText(char* text);
     int DisplaySlider(float posX, float posY, float beginHeight, float endHeight, float distBetweenRects, float filledAmount, CRGBA const& colour);
     signed int DoSettingsBeforeStartingAGame();

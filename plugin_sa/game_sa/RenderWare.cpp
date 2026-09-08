@@ -973,7 +973,7 @@ RwTexture* RwTextureSetRaster(RwTexture* texture, RwRaster* raster) {
     return ((RwTexture*(__cdecl *)(RwTexture*, RwRaster*))0x7F35D0)(texture, raster);
 }
 
-RwTexture *RwTextureRead(const char *name, char *Maskname)
+RwTexture *RwTextureRead(const char *name, const char *Maskname)
 {
     return ((RwTexture * (__cdecl *)(char const *, char const *))0x4C7510)(name, Maskname);
 }
